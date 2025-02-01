@@ -36,3 +36,29 @@ discoverButton.addEventListener('click', () => {
   };
   xhr.send();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const music = document.getElementById("bg-music");
+    const musicButton = document.getElementById("upButton");
+
+    let isPlaying = true; // Start with music playing
+
+    // Try to autoplay (Some browsers may block it without user interaction)
+    music.play().then(() => {
+        musicButton.style.filter = "brightness(1)"; // Normal brightness when playing
+    }).catch(() => {
+        isPlaying = false; // If autoplay fails, set it as paused
+        musicButton.style.filter = "brightness(0.5)"; // Grey if blocked
+    });
+
+    musicButton.addEventListener("click", function () {
+        if (isPlaying) {
+            music.pause();
+            musicButton.style.filter = "brightness(0.5)"; // Make button grey when paused
+        } else {
+            music.play();
+            musicButton.style.filter = "brightness(1)"; // Normal brightness when playing
+        }
+        isPlaying = !isPlaying;
+    });
+});
