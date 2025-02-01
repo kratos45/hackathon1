@@ -17,19 +17,17 @@ body, html {
     background-color: #333333ad;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     padding-bottom: 20px;
 }
   
   .sidebar button {
-    background-color: #444;
-    color: white;
+    background-color: #44444400;
     border: none;
-    padding: 10px;
     margin: 10px 0;
     cursor: pointer;
-    width: 40px;
+    width: 100%;
     text-align: center;
     
   }
@@ -53,12 +51,16 @@ body, html {
   }
   
   .popup-content {
-    background-color: white;
+    background-color: #f0d174;
     padding: 20px;
     border-radius: 5px;
     text-align: center;
     position: relative;
     z-index: 1001; /* Ensure popup content is above overlay */
+    font-family: 'Trajan Pro', serif;
+    font-size: 20px;
+    -webkit-text-stroke: 1px #262626;
+    width:50vw;
   }
   
   .close {
@@ -157,4 +159,15 @@ body, html {
     padding: 10px 20px;
     border-radius: 5px;
     -webkit-text-stroke: 1px #262626;
+  }
+
+  
+  .sidebar-logo {
+    width: 45px;
+    align-self: center; /* Center the logo horizontally */
+    margin-top: 10px; /* Optional: Add some space at the top */
+    
+
+    
+
   }
