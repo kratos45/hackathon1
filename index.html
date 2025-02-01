@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sufes - Roman Heritage</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Left Sidebar -->
+  <div class="sidebar">
+    <button id="upButton">Up</button>
+    <button id="downButton">Down</button>
+  </div>
+
+  <!-- Popup for Copyright -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <p>This project is developed by Cayenne Team.</p>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Background Video -->
+    <video autoplay muted loop id="bgVideo">
+      <source src="roman.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- Centered Text and Button -->
+    <div class="center-content">
+      <h1 class="titre">SUFES</h1>
+      <button id="discoverButton">Discover</button>
+    </div>
+  </div>
+
+  <!-- New Layout (Hidden Initially) -->
+  <div id="newLayout" class="hidden">
+    <div class="left-sidebar">Left Sidebar</div>
+    <div class="center-content">
+      <img id="dynamicContent" src="placeholder.jpg" alt="Dynamic Content">
+    </div>
+    <div class="right-sidebar">Right Sidebar</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
